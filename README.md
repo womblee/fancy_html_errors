@@ -1,5 +1,5 @@
 # Fancy HTML Errors
-Fancy / Goofy / Playful HTML errors which you can use
+Fancy / Goofy / Playful HTML errors which you can use on your website.
 
 **404**, **403**, **500** errors added.
 
