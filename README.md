@@ -3,8 +3,8 @@ Fancy / Goofy / Playful HTML errors which you can use
 
 **404**, **403**, **500** errors added.
 
-![Description of the GIF](https://i.imgur.com/BqIIXdi.gif)
+![404 GIF](https://github.com/womblee/fancy_html_errors/blob/main/showcase/404.gif?raw=true)
 
-![Suburban-Lemming_22 04 2025](https://github.com/user-attachments/assets/44747167-a05b-49b4-b085-77adc7c1f9cf)
+![403 GIF](https://github.com/womblee/fancy_html_errors/blob/main/showcase/403.gif?raw=true)
 
-![Fatherly-Illadopsis_22 04 2025](https://github.com/user-attachments/assets/e25fc935-14a4-4fad-9736-45601e1215c5)
+![500 GIF](https://github.com/womblee/fancy_html_errors/blob/main/showcase/500.gif?raw=true)
