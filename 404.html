@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>404 - Where We Dropping Boys?</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Exo+2:wght@400;700;900&family=Press+Start+2P&display=swap');
+
+        body {
+            font-family: 'Exo 2', sans-serif;
+            margin: 0;
+            padding: 0;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #000;
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            color: #fff;
+        }
+
+        .container {
+            background-color: rgba(10, 15, 20, 0.85);
+            padding: 2.5rem;
+            border-radius: 12px;
+            max-width: 650px;
+            width: 90%;
+            margin: 2rem auto;
+            box-shadow: 0 0 30px rgba(0, 255, 255, 0.3);
+            border: 3px solid #00ffff;
+            position: relative;
+            overflow: hidden;
+            backdrop-filter: blur(3px);
+        }
+
+        .glitch-line {
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 4px;
+            background-color: #00ffff;
+            animation: glitch-line 4s infinite;
+        }
+
+        @keyframes glitch-line {
+            0% { transform: translateX(-10px); opacity: 0; }
+            10% { transform: translateX(600px); opacity: 0.8; }
+            10.5% { opacity: 0; }
+            20% { transform: translateX(-10px); opacity: 0; }
+            100% { transform: translateX(-10px); opacity: 0; }
+        }
+
+        h1 {
+            font-family: 'Press Start 2P', cursive;
+            font-size: 2.5rem;
+            color: #ff69b4;
+            margin-bottom: 20px;
+            text-shadow: 0 0 10px rgba(255, 105, 180, 0.7),
+                         4px 4px 0 rgba(0, 0, 0, 0.7);
+            letter-spacing: 2px;
+            animation: glitch 5s infinite;
+        }
+
+        @keyframes glitch {
+            0% { transform: translateX(0); }
+            2% { transform: translateX(-3px); }
+            4% { transform: translateX(3px); }
+            6% { transform: translateX(0); }
+            100% { transform: translateX(0); }
+        }
+
+        .anime-container {
+            position: relative;
+            margin: 2rem auto;
+            max-width: 280px;
+        }
+
+        .anime-gif {
+            width: 100%;
+            border: 3px solid #ff69b4;
+            border-radius: 10px;
+            box-shadow: 0 5px 20px rgba(255, 105, 180, 0.4);
+            transition: all 0.3s ease;
+        }
+
+        .anime-gif:hover {
+            transform: scale(1.03);
+            box-shadow: 0 8px 25px rgba(255, 105, 180, 0.6);
+        }
+
+        .matrix-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(rgba(0, 255, 255, 0.1), rgba(0, 0, 0, 0));
+            pointer-events: none;
+            opacity: 0;
+            transition: opacity 0.5s ease;
+        }
+
+        .anime-container:hover .matrix-overlay {
+            opacity: 1;
+        }
+
+        .meme-text {
+            font-size: 1.4rem;
+            margin: 2rem 0;
+            line-height: 1.6;
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8);
+        }
+
+        .highlight-pink {
+            color: #ff69b4;
+            font-weight: bold;
+            text-shadow: 0 0 5px rgba(255, 105, 180, 0.7);
+        }
+
+        .highlight-cyan {
+            color: #00ffff;
+            font-weight: bold;
+            text-shadow: 0 0 5px rgba(0, 255, 255, 0.7);
+        }
+
+        .rage-comic {
+            width: 170px;
+            margin: 1.5rem auto;
+            border-radius: 8px;
+            transform: rotate(-3deg);
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.5);
+            transition: transform 0.3s ease;
+        }
+
+        .rage-comic:hover {
+            transform: rotate(3deg);
+        }
+
+        .button-container {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 15px;
+            margin: 2rem 0;
+        }
+
+        .button {
+            display: inline-block;
+            padding: 12px 25px;
+            background-color: #ff69b4;
+            color: white;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: bold;
+            font-size: 1.1rem;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+            border: none;
+            position: relative;
+            overflow: hidden;
+            z-index: 1;
+        }
+
+        .button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 7px 15px rgba(0, 0, 0, 0.4);
+        }
+
+        .button:active {
+            transform: translateY(1px);
+        }
+
+        .button::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+            transition: all 0.6s;
+            z-index: -1;
+        }
+
+        .button:hover::before {
+            left: 100%;
+        }
+
+        .button.secret {
+            background-color: #00ffff;
+            color: #000;
+        }
+
+        .bonus {
+            font-size: 0.9rem;
+            margin-top: 30px;
+            color: #aaa;
+            font-style: italic;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        .spinning {
+            display: inline-block;
+            animation: spin 2s linear infinite;
+        }
+
+        .matrix-rain {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: -1;
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 1.8rem;
+            }
+            .container {
+                padding: 1.5rem;
+            }
+            .meme-text {
+                font-size: 1.2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <canvas id="matrix-rain" class="matrix-rain"></canvas>
+    
+    <div class="container">
+        <div class="glitch-line"></div>
+        <h1>404 - LOST IN THE VOID</h1>
+        
+        <div class="anime-container">
+            <img src="media/thinking.gif" alt="Confused Anime" class="anime-gif">
+            <div class="matrix-overlay"></div>
+        </div>
+        
+        <div class="meme-text">
+            <p>BRO... YOU JUST GOT <span class="highlight-pink">YEETED</span> INTO THE <span class="highlight-cyan">DIGITAL VOID</span></p>
+            <p>THIS PAGE DOESN'T EXIST<br>UNLESS... <span class="highlight-pink">*GASP*</span> IT'S A GOVERNMENT COVER-UP?</p>
+            <p><span class="spinning">🌀</span> <em>"Wake up, Neo..."</em> <span class="spinning">🌀</span></p>
+        </div>
+        
+        <img src="media/oops_errorcode.jpeg" alt="Rage Comic" class="rage-comic">
+        
+        <div class="button-container">
+            <a href="/" class="button">RETURN TO REALITY</a>
+            <a href="https://nlog.us/r/v4mx" class="button secret">SECRET BUTTON</a>
+        </div>
+        
+        <div class="bonus">
+            <p>*notices your 404* OwO what's this?</p>
+            <p>Error code: <span class="highlight-pink">BABY-404-A</span> (Too kawaii to handle)</p>
+        </div>
+    </div>
+
+    <script>
+        // Matrix rain effect
+        document.addEventListener('DOMContentLoaded', function() {
+            const canvas = document.getElementById('matrix-rain');
+            const ctx = canvas.getContext('2d');
+            
+            canvas.width = window.innerWidth;
+            canvas.height = window.innerHeight;
+            
+            window.addEventListener('resize', function() {
+                canvas.width = window.innerWidth;
+                canvas.height = window.innerHeight;
+            });
+            
+            const characters = "01";
+            const fontSize = 14;
+            const columns = canvas.width / fontSize;
+            
+            const drops = [];
+            for (let i = 0; i < columns; i++) {
+                drops[i] = Math.floor(Math.random() * canvas.height);
+            }
+            
+            function draw() {
+                ctx.fillStyle = "rgba(0, 0, 0, 0.05)";
+                ctx.fillRect(0, 0, canvas.width, canvas.height);
+                
+                ctx.fillStyle = "#00ffff";
+                ctx.font = fontSize + "px monospace";
+                
+                for (let i = 0; i < drops.length; i++) {
+                    const text = characters.charAt(Math.floor(Math.random() * characters.length));
+                    ctx.fillText(text, i * fontSize, drops[i] * fontSize);
+                    
+                    if (drops[i] * fontSize > canvas.height && Math.random() > 0.975) {
+                        drops[i] = 0;
+                    }
+                    
+                    drops[i]++;
+                }
+            }
+            
+            // Only start animation if user has moved
+            let animationStarted = false;
+            
+            document.addEventListener('mousemove', function() {
+                if (!animationStarted) {
+                    animationStarted = true;
+                    setInterval(draw, 35);
+                }
+            });
+            
+            // Fun easter egg
+            let clicks = 0;
+            document.querySelector('.anime-gif').addEventListener('click', function() {
+                clicks++;
+                if (clicks >= 5) {
+                    document.querySelector('h1').textContent = "GLITCH IN THE MATRIX";
+                    setTimeout(() => {
+                        document.querySelector('h1').textContent = "404 - LOST IN THE VOID";
+                        clicks = 0;
+                    }, 2000);
+                }
+            });
+        });
+    </script>
+</body>
+</html>
